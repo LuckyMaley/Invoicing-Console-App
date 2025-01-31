@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MainCode</name>
+    </assembly>
+    <members>
+        <member name="T:MainCode.Models.Customer">
+            <summary>
+            This is a Customer model which contains the properties of the customer and the customer dataset.
+            
+            The properties include Customer ID, FirstName, Surname, Email, Username, PasswordHash, Salt, EncryptionType, Address, PhoneNumber.
+            The customer dataset includes a list of 10 customer records.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.Discount">
+            <summary>
+            This is a Discount model which containsthe properties of the discount and the disvount dataset.
+            
+            The properties include DiscountID,Name,Rate,Amount
+            The Discount  dataset includes a list of 10 discount dataset.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.Employee">
+            <summary>
+            This is a Employee model which contains the properties of the employee and the employee dataset.
+            
+            The properties include Employee ID, FirstName, Surname, Email, Username, PasswordHash, Salt, EncryptionType, Address, PhoneNumber, Role.
+            The employee dataset includes a list of 10 employee records.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.Invoice">
+            <summary>
+            This is a Invoice model which contains the properties of the invoice and the invoice dataset.
+            
+            The properties include InvoiceId, CustomerId, InvoiceDate, DueDate, Subtotal, Tax, DiscountId,TotalAmount,Status .
+            The invoice dataset includes a list of 10 invoice records.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.InvoiceItem">
+            <summary>
+            This is a InvoiceItems model which contains the properties of the invoiceItems and the invoiceItems dataset.
+            
+            The properties include InvoiceItemId, InvoiceId, ProductId, Quantity, UnitPrice, TotalPrice.
+            The invoiceItems dataset includes a list of 10 invoiceItems records.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.Note">
+            <summary>
+            This is a Notes model which contains the properties of the Notes and the Notes dataset.
+            
+            The properties include NotesId, InvoiceId,EmployeeId,Note, CreatedDate.
+            The Notes dataset includes a list of 10 Notes records.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.Payment">
+            <summary>
+            This is a Payment model which containsthe properties of the payment and the disvount dataset.
+            
+            The properties include  PaymentID,InvoiceID ,PaymentDate,PaymentMethod,Amount.
+            The Payment  dataset includes a list of 10 payment dataset.
+            </summary>
+        </member>
+        <member name="T:MainCode.Models.Product">
+            <summary>
+            This is a Product model which containsthe properties of the product and the disvount dataset.
+            
+            The properties include ProductID,ProductName ,StockQuantity,Price,Description.
+            The Product  dataset includes a list of 10 product dataset.
+            </summary>
+        </member>
+        <member name="T:MainCode.Repository.CustomerRepository">
+            <summary>
+             A summary about CustomerRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the CustomerRepository class and methods
+             
+             public virtual List&lt;Customer&gt; ReadGetAllRows()
+             This method clones the customers from the predefines list customers to allcustomers
+             <returns>
+             this method would return the list containing all customers  with variable name customers
+             </returns>
+             </remarks>
+            <summary>
+             A summary about CustomerRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the CustomerRepository class and methods
+             
+             public virtual List&lt;Customer&gt; ReadGetAllRows()
+             This method clones the customers from the predefines list customers to allcustomers
+             <returns>
+             this method would return the list containing all customers  with variable name customers
+             </returns>
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.DiscountRepository">
+            <summary>
+             A summary about DiscountRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the DiscountRepository class and methods 
+             public virtual List&lt;Discount&gt; ReadGetAllRows()
+             This method clones the discounts from the predefines list discounts to alldiscounts
+             <returns>
+             this method returns the list containing all discounts with variable name discounts
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.EmployeeOptions.CustomerOptions">
+             <summary>
+             This CustomerOptions class consists of methods called when a user clicks a menu option in the front-end.
+             These methods interact with the Repository to extract or remove data from the Repository.
+             </summary>
+             <remarks>
+             
+             public CustomerOptions(CustomerRepository _customersRepository, RepositoryBase&lt;Customer&gt; _customersRepositoryBase, IRepository&lt;Customer&gt; _customersIRepository)
+             A counstructor that initializes the CustomerOptions Class.
+             These parameters are used for injection into the class for mock testing.
+             <param name="_customersRepository">The customers repository.</param>
+             <param name="_customersRepositoryBase">The customers RepositoryBase which is an abstract class.</param>
+             <param name="_customersIRepository">The customers IRepository which is an interface.</param>
+             
+             public string FindCustomerByID(int cusID)
+             Finds an customers by ID and returns their details as a string.
+             <param name="cusID">The ID of the customer to find.</param>
+             <returns>A string containing the customer details if found, or a message indicating that the customer does not exist.</returns>
+             
+             public string FindCustomerByFirstName(string cusName)
+             Finds customers by their First Name and returns their details as a string.
+             <param name="cusName">The Name of the customers or customers to find.</param>
+             <returns>A string containing the customers details if found, or a message indicating that the customers does not exist.</returns>
+             
+             public string FindCustomerByFullName(string adName, string lName)
+             Finds customers by their FullName and returns their details as a string.
+             <param name="cusName">The Name of the customer or customers to find.</param>
+             <param name="lName">The Surname of the customer or customers to find.</param>
+             <returns>A string containing the customer details if found, or a message indicating that the customers does not exist.</returns>
+             
+             public string AddNewCustomer(Customer customer)
+             Adds a new customer to the repository and returns a string that shows whether it was successful or not.
+             <param name="customer">The customer object of the customer to add.</param>
+             <returns>A string containing a message indicating that the customer has been added or not.</returns>
+             
+             public string UpdateCustomer(Customer customer)
+             Updates customer to the repository and returns a string that shows whether it was successful or not.
+             <param name="customer">The customer object of the customer to update.</param>
+             <returns>A string containing a message indicating that the customer has been updated or not.</returns>
+             
+             public string RemoveCustomer(int cusId)
+             Removes customer from the repository and returns a string that shows whether it was successful or not.
+             <param name="cusId">The Id of the customer to remove as an integer type.</param>
+             <returns>A string containing a message indicating that the customer has been removed or not.</returns>
+             
+             </remarks>
+            
+        </member>
+        <member name="T:MainCode.Repository.EmployeeOptions.EmployeeOptions">
+             <summary>
+             This EmployeeOptions class consists of methods called when a user clicks a menu option in the front-end.
+             These methods interact with the Repository to extract or remove data from the Repository.
+             </summary>
+             <remarks>
+             
+             public EmployeeOptions(EmployeeRepository _employeesRepository, RepositoryBase&lt;Employee&gt; _employeesRepositoryBase)
+             A counstructor that initializes the EmployeeOptions Class.
+             These parameters are used for injection into the class for mock testing.
+             <param name="_employeesRepository">The employees repository.</param>
+             <param name="_employeesRepositoryBase">The employees IRepository.</param>
+             
+             public string FindEmployeeByID(int employeeID)
+             Finds an employee by ID and returns their details as a string.
+             <param name="employeeID">The ID of the employee to find.</param>
+             <returns>A string containing the employee details if found, or a message indicating that the employee does not exist.</returns>
+             
+             public string FindEmployeeByFirstName(string empName)
+             Finds employees by their First Name and returns their details as a string.
+             <param name="empName">The Name of the employee or employees to find.</param>
+             <returns>A string containing the employee details if found, or a message indicating that the employee does not exist.</returns>
+             
+             public string FindEmployeeByFullName(string empName, string lName)
+             Finds employees by their FullName and returns their details as a string.
+             <param name="empName">The Name of the employee or employees to find.</param>
+             <param name="lName">The Surname of the employee or employees to find.</param>
+             <returns>A string containing the employee details if found, or a message indicating that the employee does not exist.</returns>
+             
+             public string AddNewEmployee(Employee employee)
+             Adds a new employee to the repository and returns a string that shows whether it was successful or not.
+             <param name="employee">The employee object of the employee to add.</param>
+             <returns>A string containing a message indicating that the employee has been added or not.</returns>
+             
+             public string UpdateEmployee(Employee employee)
+             Updates employee to the repository and returns a string that shows whether it was successful or not.
+             <param name="employee">The employee object of the employee to update.</param>
+             <returns>A string containing a message indicating that the employee has been updated or not.</returns>
+             
+             public string RemoveEmployee(int employeeId)
+             Removes employee from the repository and returns a string that shows whether it was successful or not.
+             <param name="employeeId">The employee Id of the employee to remove as an integer type.</param>
+             <returns>A string containing a message indicating that the employee has been removed or not.</returns>
+             
+             </remarks>
+            
+        </member>
+        <member name="T:MainCode.Repository.EmployeeOptions.InvoiceItemsOptions">
+             <summary>
+             This InvoiceItemsOptions class consists of methods called when a user clicks a menu option in the front-end.
+             These methods interact with the Repository to extract or remove data from the Repository.
+             </summary>
+             <remarks>
+             
+             public InvoiceItemsOptions(InvoiceItemsRepository _invoiceItemsRepository, InvoicesRepository _invoicesRepository)
+             A counstructor that initializes the InvoiceItemsOptions Class.
+             These parameters are used for injection into the class for mock testing.
+             <param name="_invoiceItemsRepository">The invoiceItemss repository.</param>
+             <param name="_invoicesRepository">The invoices repository.</param>
+             
+             public string FindInvoiceItemsByInvoiceID(int invoiceID)
+             Finds an invoice by ID and returns the invoice items as a string.
+             <param name="invoiceID">The ID of the invoice to find.</param>
+             <returns>A string containing the invoice items if found, or a message indicating that the invoice does not exist.</returns>
+            </remarks>
+        </member>
+        <member name="T:MainCode.Repository.EmployeeOptions.InvoiceOptions">
+            <summary>
+            This InvoiceOptions class consists of methods called when a user clicks a menu option in the front-end.
+            These methods interact with the Repository to extract or remove data from the Repository.
+            </summary>
+            <remarks>
+            
+            public InvoiceOptions(InvoicesRepository _invoicesRepository)
+            A counstructor that initializes the InvoiceOptions Class.
+            These parameters are used for injection into the class for mock testing.
+            <param name="_invoicesRepositoryBase">The invoices repository.</param>
+            
+            public string FindInvoiceByID(int invoiceID)
+            Finds an invoice by ID and returns the invoice details as a string.
+            <param name="invoiceID">The ID of the invoice to find.</param>
+            <returns>A string containing the invoice details if found, or a message indicating that the invoice does not exist.</returns>
+            
+            public string FindInvoicesbyDate(string inputDate)
+            Finds an invoice by date and returns the invoice details as a string.
+            <param name="inputDate">The date of the invoice to find.</param>
+            <returns>A string containing the invoice details if found, or a message indicating that the invoice does not exist.</returns>
+            
+            public string FindInvoicesbyBetweenDates(string inputDate, string inputDateTwo)
+            Finds an invoice by between dates and returns the invoice details as a string.
+            <param name="inputDate">The beginning date of the invoice to find.</param>
+            <param name="inputDateTwo">The end date of the invoice to find.</param>
+            <returns>A string containing the invoice details if found, or a message indicating that the invoice does not exist.</returns>
+            </remarks>
+        </member>
+        <member name="T:MainCode.Repository.EmployeeRepository">
+            <summary>
+             A summary about EmployeeRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the EmployeeRepository class and methods 
+             public virtual List&lt;Employee&gt; ReadGetAllRows()
+             This method clones the employees from the predefines list employees to allemployees
+             <returns>
+             this method returns the list containing all employees with variable name employees
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.InvoiceItemsRepository">
+            <summary>
+             A summary about InvoiceItemsRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the InvoiceItemsRepository class and methods 
+             public virtual List&lt;InvoiceItems&gt; ReadGetAllRows()
+             This method clones the invoiceItems from the predefines list invoiceItems to allinvoiceItems
+             <returns>
+             this method returns the list containing all InvoiceItems with variable name invoiceItems
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.InvoicesRepository">
+            <summary>
+             A summary about InvoiceRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the InvoiceRepository class and methods 
+             public virtual List&lt;Invoice&gt; ReadGetAllRows()
+             This method clones the Invoice from the predefines list invoice to allinvoice
+             <returns>
+             this method returns the list containing all invoice with variable name invoice
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.NotesRepository">
+            <summary>
+             A summary about NotesRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the NotesRepository class and methods 
+             public virtual List&lt;Notes&gt; ReadGetAllRows()
+             This method clones the Note from the predefines list note to allnote
+             <returns>
+             this method returns the list containing all note with variable name note
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.PaymentRepository">
+            <summary>
+             A summary about PaymentRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the PaymentRepository class and methods 
+             public virtual List&lt;Payment&gt; ReadGetAllRows()
+             This method clones the payments from the predefines list payments to allpayments
+             <returns>
+             this method returns the list containing all payments with variable name payments
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Repository.ProductRepository">
+            <summary>
+             A summary about ProductRepository Class
+             </summary>
+            <remarks>
+             These remarks explain more about the ProductRepository class and methods 
+             public virtual List&lt;Product&gt; ReadGetAllRows()
+             This method clones the product from the predefines list products to allproducts
+             <returns>
+             this method returns the list containing all products with variable name products
+             </returns> 
+             </remarks>
+        </member>
+        <member name="T:MainCode.Utilities.MainCodeStaticObjects">
+            <summary>
+             A summary about MainCodeStaticObjects Class
+             </summary>
+            <remarks>
+             These remarks explain more about the MainCodeStaticObjects class and methods 
+             
+            public struct Person
+            This struct defines the person that has logged on to the system.
+            It includes the person's details such as id, firstName, surname, passwordHash, salt, and encryptionType.
+            
+            Person person
+            This is a person object that is used when initialising a new Person.  
+            
+             </remarks>
+        </member>
+        <member name="T:MainCode.Utilities.MenuOptions">
+            <summary>
+            A summary about MenuOptions Class
+            </summary>
+            <remarks>
+            These remarks explain more about the MenuOptions class and methods 
+             
+            public static void EmployeeMenu()  
+            This method is the employee main menu which shows 6 available options for the employee.
+            
+            public static void EmployeeMoreMenu(ref int count)
+            This method is the employee more main menu which shows remainder of the available options for the employee.
+            <param name="count">
+            This is an integer that is taken in by the method for keeping track of where the menu is and to let the program hit the exit option.
+            </param>
+            
+            public static void EmployeeOptionOneSubMenu()
+            This method is the employee sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionTwoSubMenu()
+            This method is the customer sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionThreeSubMenu()
+            This method is the product sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionFourSubMenu()
+            This method is the discount sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionFiveSubMenu()
+            This method is the invoice sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionSevenSubMenu()
+            This method is the invoice item sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionEightSubMenu()
+            This method is the payment sub menu which shows available options for the employee.
+            
+            public static void EmployeeOptionNineSubMenu()
+            This method is the invoice notes sub menu which shows available options for the employee.
+            
+            </remarks>
+        </member>
+        <member name="M:MainCode.Utilities.MenuOptions.CustomerMenu">
+            <summary>
+            A summary about MenuOptions extended Class
+            </summary>
+            <remarks>
+            These remarks explain more about the MenuOptions extended class and methods 
+             
+            public static void CustomerMenu()  
+            This is the customers main menu which shows all the available options for the customers.
+            
+            </remarks>
+        </member>
+    </members>
+</doc>

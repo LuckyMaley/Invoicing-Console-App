@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "5KlXnAUzeCm3TnxdKpTKpow9bg36Um4yZmeWz6nhZKxTMUX6j/xbb8YMpOI2yZY+o/d2HQrDK+mbse3VsU808g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mmmm\\Documents\\VisualStudioWorkspace\\llm_kc_sn_invoicingsystem_ood4-main\\llm_kc_sn_invoicingsystem_ood4-main\\LLM_KC_SN_InvoicingSystem_OOD4\\InvoicingSystem\\InvoicingSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mmmm\\.nuget\\packages\\log4net\\2.0.17\\log4net.2.0.17.nupkg.sha512",
+    "C:\\Users\\mmmm\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\mmmm\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\mmmm\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\mmmm\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\mmmm\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\mmmm\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
