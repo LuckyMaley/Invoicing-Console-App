@@ -62,7 +62,45 @@ A structured branching strategy must be followed to keep the codebase organized:
    - Open a pull request on GitHub targeting `dev` for code review.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+ The project relies on Visual Studio 2022 Community edition as the primary IDE for software development activities. This dependency is critical as Visual Studio provides a comprehensive suite of tools, libraries, and features necessary for building, debugging, and deploying applications using various programming languages, including C#. Furthermore, the dependency on Visual Studio 2022 Community edition offers a compelling combination of features, compatibility, accessibility, and community support, making it an ideal choice for facilitating efficient and cost-effective software development within the project.
+
+
+ ### Steps
+
+1. Go to the documents folder and then clone the project there (you can use git bash or any cmd):
+```
+cd Documents
+```
+```
+git clone https://github.com/LuckyMaley/Invoicing-Console-App.git
+```
+
+2. Open the [project solution](/LLM_KC_SN_InvoicingSystem_OOD4/LLM_KC_SN_InvoicingSystem_OOD4.sln) on Visual Studio, and run the application.
 
 ## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+![Screenshot (2322)](https://github.com/user-attachments/assets/46718e1a-6a90-4721-a41c-cab739e577ae)
+
+![Screenshot (2323)](https://github.com/user-attachments/assets/a792a2e4-5902-4313-adee-a6436e92c556)
+
+![Screenshot (2324)](https://github.com/user-attachments/assets/461fdb40-fb11-4b82-8d0f-b9bd6ca14bbe)
+
+![Screenshot (2325)](https://github.com/user-attachments/assets/9ad1e8d5-5fc2-4e4e-ba4c-dce36ccfd398)
+
+![Screenshot (2326)](https://github.com/user-attachments/assets/607dbcd2-e80b-47f6-8ebb-18b1951c0820)
+
+![Screenshot (2327)](https://github.com/user-attachments/assets/f97d199d-72a0-4d9f-8529-93ebf9b3c31a)
+
+![Screenshot (2328)](https://github.com/user-attachments/assets/519334c9-2572-4052-b236-6b38a32c3ffa)
+
+![Screenshot (2333)](https://github.com/user-attachments/assets/40b7af72-0ae1-4024-ab69-2e654d96d5a2)
+
+![Screenshot (2334)](https://github.com/user-attachments/assets/a55752b4-b468-4e27-a9b3-833aef9564cb)
+
+![Screenshot (2335)](https://github.com/user-attachments/assets/323f6eb8-fdd9-4639-b535-825becd729af)
+
+![Screenshot (2336)](https://github.com/user-attachments/assets/24ff3d79-4046-4c5e-abe9-3992c29b2f71)
+
+![Screenshot (2337)](https://github.com/user-attachments/assets/0e029ec9-4537-4743-9d9f-65304adabd65)
+
+![Screenshot (2338)](https://github.com/user-attachments/assets/bd3d1baf-d2c4-46c4-9d82-98248bb70c23)
+
